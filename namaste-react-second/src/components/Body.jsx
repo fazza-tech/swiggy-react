@@ -1,6 +1,16 @@
+import Restaurentcard from "./Restaurentcard"
+import restaurants from "../config/data"
 function Body() {
-    return(<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, enim? Esse, ipsa placeat eaque obcaecati delectus voluptatem ab reprehenderit itaque facere. Adipisci repellat dicta provident quia consectetur vero, laborum suscipit.</p>)
-    
+
+
+    return (
+        <div className="res-card-container">
+            {
+                restaurants.map((resList) => (<Restaurentcard resData={resList} />))
+            }
+        </div>
+    )
+
 }
 
 export default Body
